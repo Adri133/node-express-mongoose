@@ -1,0 +1,14 @@
+<%- include('./partials/header'); %>
+  <main>
+    <div class="ui segment">
+      <h1><%= title %></h1>
+      <% pokemons.forEach(function(pokemon) { %>
+        <li class="ui segment">
+          <strong><%= pokemon.name %></strong>
+          est de type <%= pokemon.type %>.
+        </li>
+      <% }); %>
+      <a href="/pokemon/create">Add</a>
+    </div>
+  </main>
+  <%- include('./partials/footer'); %>
